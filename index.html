@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW lesson2</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+    <p ></p>
+    <script>
+        var str1 = prompt('Задача 1: Укажите первое слово:');
+        var str2 = prompt('Задача 1: Укажите второе слово:');
+        var str3 = prompt('Задача 1: Укажите третье слово:');
+
+        var res = [];
+
+        str1.length > str2.length ? res = str1 : str2.length > str3.length ? res = str2 : res = str3;
+
+        for(var el of res){
+            console.log(el + '\n');
+        }
+    </script>
+
+    <script>
+        marker(prompt('Задача 2: Укажите текст:'), prompt('Задача 2: Укажите цвет:'), +prompt('Задача 2: Укажите размер текста:'));
+
+        function marker(text, color, size){
+            document.write(
+                    `<p id:"marker" style="color:${color}; font-size:${size+'px'}; 
+                    font-family: Comic Sans MS, Comic Sans, cursive;">${text}</p>`
+            );
+        }
+    </script>
+
+
+
+    <div id="box"></div>
+
+    <script>
+        placeImages(["https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-html5-circle-1024.png", "https://w7.pngwing.com/pngs/474/144/png-transparent-css3-alt-brands-icon.png", "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png"]);
+
+
+        function placeImages(arr){
+            for (let index = 0; index < arr.length; index++) {
+                box.innerHTML += `<img src="${arr[index]}" alt="image" width="700px">`;
+            }
+        }
+    </script>
+
+</body>
+</html>
